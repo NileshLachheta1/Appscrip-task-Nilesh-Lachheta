@@ -1,0 +1,196 @@
+#nav-main {
+        padding-left: 6%;
+        padding-right: 6%;
+        padding-top: 10px;
+        margin: 10px;
+    }
+
+    #sub-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+        padding: 6px;
+        font-weight: lighter;
+    }
+
+    .sub-nav-section {
+        display: flex;
+        align-items: center;
+        color: red;
+        gap: 8px;
+    }
+
+    #nav-maindiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        cursor: pointer;
+    }
+
+    #nav-menu-icon {
+        display: none;
+    }
+
+    #nav-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-icon {
+        font-size: 22px;
+    }
+
+    #language-icon {
+        display: flex;
+        gap: 5px;
+    }
+
+    #nav-links {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        gap: 2%;
+        font-weight: 800;
+        font-size: 15px;
+        cursor: pointer;
+        padding-top: 10px;
+    }
+
+    .nav-link {
+        position: relative;
+        color: black; /* Initial color */
+        text-decoration: none;
+        padding-bottom: 5px; /* Space for the bottom border */
+        transition: color 0.3s ease; /* Smooth color transition */
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px; /* Height of the bottom border */
+        background-color: red; /* Border color */
+        transition: width 0.3s ease; /* Smooth border transition */
+    }
+
+    .nav-link:hover {
+        color: red; /* Change text color on hover */
+    }
+
+    .nav-link:hover::after {
+        width: 100%; /* Full width on hover */
+    }
+
+    @media screen and (max-width: 768px) {
+        #nav-main {
+            padding-left: 0%;
+            padding-right: 0%;
+            padding-top: 10px;
+            margin: 0px;
+            border-bottom: 1px solid rgb(172, 169, 169);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Box shadow effect */
+        }
+
+        #nav-maindiv{
+            margin: 8px;
+        }
+
+        #nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            border-top: 1px solid #ccc;
+            padding: 10px 0;
+
+        }
+
+        #logo-heading {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #nav-menu-icon {
+            display: block;
+            font-size: 26px;
+        }
+
+        #logo {
+            width: 22px;
+            height: 20px;
+        }
+
+        #nav-icons {
+            gap: 8px;
+        }
+
+        .nav-icon {
+            font-size: 20px;
+        }
+
+        #nav-logo-section {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        div button:active {
+            border : 1px solid lightgray;
+            border-radius: 5px;
+            scale: 105%;
+        }
+
+        div button{
+            background: transparent;
+            border: none;
+        }
+
+        .nav-link {
+            list-style: none;
+            padding: 6px;
+            margin: 2%;
+            position: relative;
+            color: black; /* Initial color */
+            text-decoration: none;
+            padding-bottom: 5px; /* Space for the bottom border */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px; /* Height of the bottom border */
+            background-color: red; /* Border color */
+            transition: width 0.3s ease; /* Smooth border transition */
+        }
+
+        .nav-link:hover {
+            color: red; /* Change text color on hover */
+        }
+
+        .nav-link:hover::after {
+            width: 100%; /* Full width on hover */
+        }
+
+
+        .sub-nav-section-2,
+        .sub-nav-section-3,
+        #user-icon, #language-icon {
+            display: none;
+        }
+    }
