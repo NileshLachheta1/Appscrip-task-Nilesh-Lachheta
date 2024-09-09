@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 import { IoIosArrowBack } from "react-icons/io";
 import { ArrowIcon, HeartIcon, ForwardArrowIcon } from '../Constants/icons';
 import './Product.css'
-
 import { filterOptions, products } from '../Constants/data';
-
 
 const Product = () => {
   const [isShowFilter, setIsShowFilter] = useState(false);
@@ -47,25 +45,25 @@ const Product = () => {
           </div>
         </div>
         <div id="product-header-2" onClick={handleRecommend}>
-      <p>RECOMMENDED</p>
-      <ArrowIcon />
-      <div className={`dropdown-content ${openRecommend ? "show-recommend" : "hide-recommend"}`}>
-        <ul>
-          <li>RECOMMENDED</li>
-          <li>NEWEST FIRST</li>
-          <li>POPULAR</li>
-          <li>PRICE : HIGH TO LOW</li>
-          <li>PRICE : LOW TO HIGH</li>
-        </ul>
-      </div>
-    </div>
+          <p>RECOMMENDED</p>
+          <ArrowIcon />
+          <div className={`dropdown-content ${openRecommend ? "show-recommend" : "hide-recommend"}`}>
+            <ul>
+              <li>RECOMMENDED</li>
+              <li>NEWEST FIRST</li>
+              <li>POPULAR</li>
+              <li>PRICE : HIGH TO LOW</li>
+              <li>PRICE : LOW TO HIGH</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div id='product-main-section'>
         <div id={`${isShowFilter ? "filter-section-1" : "hide-filter-section"}`}>
           <div className='filter-link-1'>
             <input type="checkbox" name='custom' id='custom' />
-            <label htmlFor='custom' name="custom">CUSTOMIZABLE</label>
+            <label htmlFor='custom' name="custom">&nbsp;CUSTOMIZABLE</label>
           </div>
 
           {
@@ -94,15 +92,16 @@ const Product = () => {
             })
           }
         </div>
+
         <div id='product-card-section'>
           {
             products?.map((product, index) => {
               return (
                 <div className='card' key={index}>
-                  <img src={product.image} alt="" />
-                  <p>{product.title}</p>
+                  <img src={product?.image} alt="" />
+                  <p>{product?.title}</p>
                   <div className='card-footer'>
-                    <small>{product.descriptioin}</small>
+                    <small>{product?.description}</small>
                     <HeartIcon className='footer-icon' />
                   </div>
                 </div>
